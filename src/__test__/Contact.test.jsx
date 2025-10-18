@@ -6,7 +6,7 @@ test("muestra alerta al enviar formulario", () => {
 
   render(<Contact />);
 
-  const form = screen.getByTestId("contact-form"); // <-- ahora funciona
+  const form = screen.getByTestId("contact-form");
   fireEvent.submit(form);
 
   expect(window.alert).toHaveBeenCalledWith("Mensaje enviado correctamente");
